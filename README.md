@@ -1,6 +1,7 @@
 # Smart-Home-Automation-System-with-Voice-Control-and-Manual-Using-Arduino-Uno
 
 Objective
+
 This project presents the design and implementation of a Smart Home Automation System using Arduino UNO that integrates appliance control, security, and environmental monitoring. A 4×4 keypad and servo motor are used to create a password-protected door lock mechanism, ensuring restricted access. Household appliances such as a DC fan and DC light are controlled through a two-channel relay module, which supports three modes of operation: manual push buttons, Bluetooth mobile application, and voice/serial commands. A DHT11 sensor continuously monitors the temperature and humidity, displaying real-time data on a 16×2 I2C LCD. If the temperature exceeds a predefined threshold (33°C), the system triggers warning messages on the LCD and sends alerts via Serial Monitor and Bluetooth, enhancing safety. The proposed system demonstrates a low-cost, multifunctional, and reliable automation solution, suitable for smart home applications. Future improvements may include IoT-based remote monitoring, cloud integration, and additional sensor-based security features.
 
 ____________________________________________________________________________________________________________________________
