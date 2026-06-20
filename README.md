@@ -116,6 +116,7 @@ Step 4: Arduino Initialization
   1. Power on the Arduino.
   2. Upload the Arduino code provided for the system.
   3. Arduino initializes:
+
      a. LCD displays “SMART HOME – Group 2” for 2 seconds.
      b. Servo motor moves to locked position (0°).
      c. System waits for password entry.
@@ -140,10 +141,11 @@ Step 5: Door Security Operation
 Step 6: Manual Control of Loads
 
   1. Push Button Control:
-         o	Press PB1 → toggle DC light (Relay1 ON/OFF).
-         o	Press PB2 → toggle DC fan (Relay2 ON/OFF).
-         o	LCD updates Relay1 and Relay2 status.
-         o	Status is sent to Serial Monitor and Bluetooth.
+     
+        o	Press PB1 → toggle DC light (Relay1 ON/OFF).
+        o	Press PB2 → toggle DC fan (Relay2 ON/OFF).
+        o	LCD updates Relay1 and Relay2 status.
+        o	Status is sent to Serial Monitor and Bluetooth.
 
 Step 7: Remote Control via Bluetooth / Voice
 
@@ -172,6 +174,7 @@ Step 8: Environmental Monitoring
     	  o	Temperature & Humidity Page → Shows real-time sensor readings.
     	
 Step 9: Temperature Warning System
+
    1.	Arduino checks the temperature from DHT11.
    2.	If temperature > 33°C:
       
