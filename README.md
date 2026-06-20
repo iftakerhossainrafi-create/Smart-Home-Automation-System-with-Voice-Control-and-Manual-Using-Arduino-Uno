@@ -18,7 +18,7 @@ In this project:
 4. DHT11 sensor monitors room temperature and humidity, displayed on a 16×2 I2C LCD.
 5. A temperature threshold is implemented: if temperature exceeds 33°C, the system displays a warning message and sends alerts via Serial Monitor and Bluetooth, improving safety.
 
-This system demonstrates integration of security, environmental monitoring, and automated control for smart homes.
+This system demonstrates integration of security, environmental monitoring and automated control for smart homes.
 
 ____________________________________________________________________________________________________________________________
 
@@ -71,8 +71,8 @@ Step 1: System Setup and Power Supply
 
   1. Place the Arduino UNO on the breadboard or work area.
   2. Connect the 5V and GND pins of Arduino to the power rails of the breadboard.
-  3. Connect the 12V AC-DC adapter to the relay module, DC fan, and DC light circuits for powering the loads.
-  4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
+  3. Connect the 12V AC-DC adapter to the relay module, DC fan and DC light circuits for powering the loads.
+  4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor and keypad.
 
 Step 2: Connecting Input Devices
 
@@ -90,7 +90,7 @@ Step 2: Connecting Input Devices
      
   5. DHT11 Sensor:
       
-     a. Connect VCC to 5V, GND to GND, and data pin to D12.
+     a. Connect VCC to 5V, GND to GND and data pin to D12.
  
 Step 3: Connecting Output Devices
 
@@ -103,6 +103,7 @@ Step 3: Connecting Output Devices
   3. Servo Motor:
 
      a. Connect signal pin of the servo to D9.
+     
      b. VCC → 5V, GND → GND.
      
   5. I2C LCD:
@@ -159,15 +160,19 @@ Step 7: Remote Control via Bluetooth / Voice
    1.	Send commands from a mobile app connected via HC-05 or via Serial Monitor:
       
         o	Bluetooth Commands:
-     		
-          a. 1 → Light ON
-     	    b. 2 → Light OFF
-     	    c. 3 → Fan ON.
-     	    d. 4 → Fan OFF.
+
+      	   a. 1 → Light ON
+     	
+      	   b. 2 → Light OFF
+     	
+      	   c. 3 → Fan ON.
+     	
+      	   d. 4 → Fan OFF.
 
       	o	Voice/Serial Commands:
      	     a. "relay1 on/off" → Light.
-     	     b. "relay2 on/off" → Fan.
+    
+           b. "relay2 on/off" → Fan.
 
   3.	Arduino reads the command, updates relay states, and refreshes the LCD.
 
@@ -178,6 +183,7 @@ Step 8: Environmental Monitoring
   3.	LCD alternates every 2 seconds between:
      
         o	Relay Status Page → Shows ON/OFF state of light and fan.
+    	
     	  o	Temperature & Humidity Page → Shows real-time sensor readings.
     	
 Step 9: Temperature Warning System
@@ -191,7 +197,7 @@ Step 9: Temperature Warning System
      	
      	  o	Bluetooth sends the same alert to the mobile app.
 
-   4. This warning repeats until temperature falls below the threshold.
+  3. This warning repeats until temperature falls below the threshold.
 
 Step 10: Continuous Operation
 
@@ -205,14 +211,14 @@ Step 10: Continuous Operation
      	
      	  o	Temperature & humidity
      	
-   3.	LCD updates every 2 seconds, providing real-time feedback.
-   4.	The system loops indefinitely, maintaining automation, monitoring, and safety
+   2.	LCD updates every 2 seconds, providing real-time feedback.
+   3.	The system loops indefinitely, maintaining automation, monitoring and safety
 
 ____________________________________________________________________________________________________________________________
 
 Output
 1.	The LCD alternates between relay status and temperature/humidity.
-2.	Push buttons, Bluetooth commands, and voice commands successfully turn appliances ON/OFF.
+2.	Push buttons, Bluetooth commands and voice commands successfully turn appliances ON/OFF.
 3.	Correct password entry unlocks the door (servo rotates).
 4.	When temperature > 33°C, the LCD shows:
    
@@ -223,7 +229,7 @@ ________________________________________________________________________________
 
 Discussion
 
-The system demonstrates a fully functional smart home automation setup that integrates security, environmental monitoring, and automated control. It offers several advantages, including multi-mode appliance control through manual operation, Bluetooth, and voice commands, as well as real-time temperature and humidity monitoring. Temperature-based safety alerts help prevent overheating, and a password-protected door adds an extra layer of security to the home. However, the system also has some limitations. For instance, the temperature threshold is fixed, which can be improved in the future by introducing adjustable limits. Additional actuators such as fans, alarms, or air conditioning units could also be integrated to provide automatic responses to high temperatures. Extending IoT connectivity would allow remote monitoring and control via the internet, while adding extra sensors like smoke and motion detectors could further enhance the overall safety and reliability of the smart home.
+The system demonstrates a fully functional smart home automation setup that integrates security, environmental monitoring, and automated control. It offers several advantages, including multi-mode appliance control through manual operation, Bluetooth and voice commands, as well as real-time temperature and humidity monitoring. Temperature-based safety alerts help prevent overheating and a password-protected door adds an extra layer of security to the home. However, the system also has some limitations. For instance, the temperature threshold is fixed, which can be improved in the future by introducing adjustable limits. Additional actuators such as fans, alarms, or air conditioning units could also be integrated to provide automatic responses to high temperatures. Extending IoT connectivity would allow remote monitoring and control via the internet, while adding extra sensors like smoke and motion detectors could further enhance the overall safety and reliability of the smart home.
 
 
 ____________________________________________________________________________________________________________________________
