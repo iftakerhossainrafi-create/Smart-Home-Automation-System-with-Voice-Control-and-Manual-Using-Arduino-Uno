@@ -78,12 +78,13 @@ Step 2: Connecting Input Devices
 
   1. Push Buttons:
 
-        a. Connect PB1 to Arduino pin D2 and PB2 to D3.
-        b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
+     a. Connect PB1 to Arduino pin D2 and PB2 to D3.
+     b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
+     
   3. 4x4 Keypad:
 
-        a. Connect rows to analog pins: A0, A1, A2, A3.
-        b. Connect columns to digital pins: D6, D7, D8, D13.
+     a. Connect rows to analog pins: A0, A1, A2, A3.
+     b. Connect columns to digital pins: D6, D7, D8, D13.
      
   5. DHT11 Sensor:
       
@@ -92,21 +93,28 @@ Step 2: Connecting Input Devices
 Step 3: Connecting Output Devices
 
   1. Relay Module:
-      a. Relay1 controls the DC light, connected to D4 of Arduino.
-      b. Relay2 controls the DC fan, connected to D5 of Arduino.
+     
+     a. Relay1 controls the DC light, connected to D4 of Arduino.
+     b. Relay2 controls the DC fan, connected to D5 of Arduino.
+     
   2. Servo Motor:
-      a. Connect signal pin of the servo to D9.
-      b. VCC → 5V, GND → GND.
+
+     a. Connect signal pin of the servo to D9.
+     b. VCC → 5V, GND → GND.
+     
   3. I2C LCD:
-      a. Connect SDA to A4, SCL to A5, VCC → 5V, GND → GND.
+     
+     a. Connect SDA to A4, SCL to A5, VCC → 5V, GND → GND.
+     
   4. HC-05 Bluetooth Module:
-      a. RX → Arduino D10, TX → Arduino D11 through a voltage divider (to reduce 5V TX to 3.3V for HC-05).VCC → 5V, GND → GND.
+
+     a. RX → Arduino D10, TX → Arduino D11 through a voltage divider (to reduce 5V TX to 3.3V for HC-05).VCC → 5V, GND → GND.
 
 Step 4: Arduino Initialization
 
   1. Power on the Arduino.
   2. Upload the Arduino code provided for the system.
-  3. Arduino initializes:
+  3.  Arduino initializes:
       a. LCD displays “SMART HOME – Group 2” for 2 seconds.
       b. Servo motor moves to locked position (0°).
       c. System waits for password entry.
@@ -115,13 +123,17 @@ Step 5: Door Security Operation
              
    1. Enter the password (default: 1234) using the keypad.
    2. Press # to confirm.
+   
        a. If correct:
-              i. Servo rotates to 90°, unlocking the door.
-              ii. LCD displays “Door Open – Welcome”.
-              iii. Bluetooth app receives a message “Door Open – Welcome”.
+
+         1. Servo rotates to 90°, unlocking the door.
+         2. LCD displays “Door Open – Welcome”.
+         3.  Bluetooth app receives a message “Door Open – Welcome”.
+            
        b. If incorrect:
-              i. LCD displays “Wrong Password!” for 2 seconds.
-              ii. Prompt to re-enter the password.
+
+         1. LCD displays “Wrong Password!” for 2 seconds.
+         2. Prompt to re-enter the password.
       
 Step 6: Manual Control of Loads
 1.	Push Button Control:
