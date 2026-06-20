@@ -12,11 +12,11 @@ Home automation integrates sensors, actuators, microcontrollers, and communicati
 
 In this project:
 
-1.	Arduino UNO acts as the central controller.
-2.	4x4 Keypad and Servo Motor provide door security, allowing only authorized users (password entry) to unlock the door.
+1. Arduino UNO acts as the central controller.
+2. 4x4 Keypad and Servo Motor provide door security, allowing only authorized users (password entry) to unlock the door.
 3. Two-channel relay module controls the DC fan and light, allowing manual (push buttons), Bluetooth (mobile app), or voice/serial commands to operate appliances.
-4.	DHT11 sensor monitors room temperature and humidity, displayed on a 16×2 I2C LCD.
-5.	A temperature threshold is implemented: if temperature exceeds 33°C, the system displays a warning message and sends alerts via Serial Monitor and Bluetooth, improving safety.
+4. DHT11 sensor monitors room temperature and humidity, displayed on a 16×2 I2C LCD.
+5. A temperature threshold is implemented: if temperature exceeds 33°C, the system displays a warning message and sends alerts via Serial Monitor and Bluetooth, improving safety.
 
 This system demonstrates integration of security, environmental monitoring, and automated control for smart homes.
 
@@ -24,21 +24,21 @@ ________________________________________________________________________________
 
 Equipments:
 
-1.	DC Fan (12V)	
-2.	DC Light (12V)
-3.	4x4 Keypad	
-4.	Servo Motor	
-5.	DHT11 Humidity & Temperature Sensor	
-6.	Two-Channel Relay Module	
-7.	I2C LCD (16×2)	
-8.	HC-05 Bluetooth Module	
-9.	Arduino UNO	
-10.	Push Buttons	
-11.	2kΩ Resistors	
-12.	12V AC-DC Adapter	
-13.	5V AC-DC Adapter	
-14.	Jumper Wires
-15.	Breadboard	
+1. DC Fan (12V)	
+2. DC Light (12V)
+3. 4x4 Keypad	
+4. Servo Motor	
+5. DHT11 Humidity & Temperature Sensor	
+6. Two-Channel Relay Module	
+7. I2C LCD (16×2)	
+8. HC-05 Bluetooth Module	
+9. Arduino UNO	
+10. Push Buttons	
+11. 2kΩ Resistors	
+12. 12V AC-DC Adapter	
+13. 5V AC-DC Adapter	
+14. Jumper Wires
+15. Breadboard	
 
 ____________________________________________________________________________________________________________________________
 
@@ -47,11 +47,13 @@ Flowchart
 <img width="512" height="951" alt="Flowchart" src="https://github.com/user-attachments/assets/74696ba3-97fa-4c9a-b2bb-8bc7a6c75b62" />
 ____________________________________________________________________________________________________________________________
 
+
 Pin Diagram
 
 <img width="429" height="504" alt="Pin Diagram" src="https://github.com/user-attachments/assets/80bb7eba-c36e-4b36-9a74-26da8c57071a" />
 
 ____________________________________________________________________________________________________________________________
+
 
 Connection :
 
@@ -61,49 +63,52 @@ Connection :
 
 ____________________________________________________________________________________________________________________________
 
+
 Procedure
+
 Step 1: System Setup and Power Supply
-1.	Place the Arduino UNO on the breadboard or work area.
-2.	Connect the 5V and GND pins of Arduino to the power rails of the breadboard.
-3.	Connect the 12V AC-DC adapter to the relay module, DC fan, and DC light circuits for powering the loads.
-4.	Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
+             1. Place the Arduino UNO on the breadboard or work area.
+             2. Connect the 5V and GND pins of Arduino to the power rails of the breadboard.
+             3. Connect the 12V AC-DC adapter to the relay module, DC fan, and DC light circuits for powering the loads.
+             4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
+       
 Step 2: Connecting Input Devices
-1.	Push Buttons:
-o	Connect PB1 to Arduino pin D2 and PB2 to D3.
-o	Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
-2.	4x4 Keypad:
-o	Connect rows to analog pins: A0, A1, A2, A3.
-o	Connect columns to digital pins: D6, D7, D8, D13.
-3.	DHT11 Sensor:
-o	Connect VCC to 5V, GND to GND, and data pin to D12.
+             1. Push Buttons:
+                   a. Connect PB1 to Arduino pin D2 and PB2 to D3.
+                   b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
+             2. 4x4 Keypad:
+                   a. Connect rows to analog pins: A0, A1, A2, A3.
+                   b. Connect columns to digital pins: D6, D7, D8, D13.
+             3. DHT11 Sensor:
+                   a. Connect VCC to 5V, GND to GND, and data pin to D12.
 Step 3: Connecting Output Devices
-1.	Relay Module:
-o	Relay1 controls the DC light, connected to D4 of Arduino.
-o	Relay2 controls the DC fan, connected to D5 of Arduino.
-2.	Servo Motor:
-o	Connect signal pin of the servo to D9.
-o	VCC → 5V, GND → GND.
-3.	I2C LCD:
-o	Connect SDA to A4, SCL to A5, VCC → 5V, GND → GND.
-4.	HC-05 Bluetooth Module:
-o	RX → Arduino D10, TX → Arduino D11 through a voltage divider (to reduce 5V TX to 3.3V for HC-05).VCC → 5V, GND → GND.
+             1. Relay Module:
+                   a. Relay1 controls the DC light, connected to D4 of Arduino.
+                   b. Relay2 controls the DC fan, connected to D5 of Arduino.
+             2. Servo Motor:
+                   a. Connect signal pin of the servo to D9.
+                   b. VCC → 5V, GND → GND.
+             3. I2C LCD:
+                   a. Connect SDA to A4, SCL to A5, VCC → 5V, GND → GND.
+             4. HC-05 Bluetooth Module:
+                   a. RX → Arduino D10, TX → Arduino D11 through a voltage divider (to reduce 5V TX to 3.3V for HC-05).VCC → 5V, GND → GND.
 Step 4: Arduino Initialization
-1.	Power on the Arduino.
-2.	Upload the Arduino code provided for the system.
-3.	Arduino initializes:
-o	LCD displays “SMART HOME – Group 2” for 2 seconds.
-o	Servo motor moves to locked position (0°).
-o	System waits for password entry.
+             1. Power on the Arduino.
+             2. Upload the Arduino code provided for the system.
+             3. Arduino initializes:
+                   a. LCD displays “SMART HOME – Group 2” for 2 seconds.
+                   b. Servo motor moves to locked position (0°).
+                   c. System waits for password entry.
 Step 5: Door Security Operation
-1.	Enter the password (default: 1234) using the keypad.
-2.	Press # to confirm.
-o	If correct:
-	Servo rotates to 90°, unlocking the door.
-	LCD displays “Door Open – Welcome”.
-	Bluetooth app receives a message “Door Open – Welcome”.
-o	If incorrect:
-	LCD displays “Wrong Password!” for 2 seconds.
-	Prompt to re-enter the password.
+             1. Enter the password (default: 1234) using the keypad.
+             2. Press # to confirm.
+                   a. If correct:
+                            Servo rotates to 90°, unlocking the door.
+                            LCD displays “Door Open – Welcome”.
+                            Bluetooth app receives a message “Door Open – Welcome”.
+                   b. If incorrect:
+                            LCD displays “Wrong Password!” for 2 seconds.
+                            Prompt to re-enter the password.
 Step 6: Manual Control of Loads
 1.	Push Button Control:
 o	Press PB1 → toggle DC light (Relay1 ON/OFF).
