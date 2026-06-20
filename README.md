@@ -161,30 +161,31 @@ Step 7: Remote Control via Bluetooth / Voice
       
         o	Bluetooth Commands:
 
-      	   a. 1 → Light ON
+     	   a. 1 → Light ON
      	
-      	   b. 2 → Light OFF
+      	 b. 2 → Light OFF
      	
-      	   c. 3 → Fan ON.
+      	 c. 3 → Fan ON.
      	
-      	   d. 4 → Fan OFF.
+      	 d. 4 → Fan OFF.
 
       	o	Voice/Serial Commands:
-     	     a. "relay1 on/off" → Light.
+     	
+     	   a. "relay1 on/off" → Light.
     
-           b. "relay2 on/off" → Fan.
+         b. "relay2 on/off" → Fan.
 
-  3.	Arduino reads the command, updates relay states, and refreshes the LCD.
+  2.	Arduino reads the command, updates relay states, and refreshes the LCD.
 
 Step 8: Environmental Monitoring
 
   1.	The DHT11 sensor continuously reads temperature and humidity.
   2.	Arduino calculates temperature in °C and humidity in %.
   3.	LCD alternates every 2 seconds between:
-     
-        o	Relay Status Page → Shows ON/OFF state of light and fan.
+
+   o	Relay Status Page → Shows ON/OFF state of light and fan.
     	
-    	  o	Temperature & Humidity Page → Shows real-time sensor readings.
+   o	Temperature & Humidity Page → Shows real-time sensor readings.
     	
 Step 9: Temperature Warning System
 
