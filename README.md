@@ -158,22 +158,22 @@ Step 6: Manual Control of Loads
 Step 7: Remote Control via Bluetooth / Voice
 
    1.	Send commands from a mobile app connected via HC-05 or via Serial Monitor:
-      
-        o	Bluetooth Commands:
+
+     	 a. Bluetooth Commands:
      	
-     	   a. 1 → Light ON
+     	   i. 1 → Light ON
      	
-     	   b. 2 → Light OFF
+     	   ii. 2 → Light OFF
 
-     	   c. 3 → Fan ON.
+     	   iii. 3 → Fan ON.
 
-     	   d. 4 → Fan OFF.
+     	   iv. 4 → Fan OFF.
 
-      	o	Voice/Serial Commands:
+        b. Voice/Serial Commands:
 
-     	   a. "relay1 on/off" → Light.
+     	   i. "relay1 on/off" → Light.
 
-     	   b. "relay2 on/off" → Fan.
+     	   ii. "relay2 on/off" → Fan.
 
    2.	Arduino reads the command, updates relay states, and refreshes the LCD.
 
@@ -183,20 +183,20 @@ Step 8: Environmental Monitoring
   2.	Arduino calculates temperature in °C and humidity in %.
   3.	LCD alternates every 2 seconds between:
 
-   o	Relay Status Page → Shows ON/OFF state of light and fan.
-    	
-   o	Temperature & Humidity Page → Shows real-time sensor readings.
+         a. Relay Status Page → Shows ON/OFF state of light and fan.
+
+    	   b. Temperature & Humidity Page → Shows real-time sensor readings.
     	
 Step 9: Temperature Warning System
 
    1.	Arduino checks the temperature from DHT11.
    2.	If temperature > 33°C:
       
-        o	LCD displays “WARNING!!! TEMP > 33C”.
+        a. LCD displays “WARNING!!! TEMP > 33C”.
      	
-     	  o	Serial Monitor prints “ALERT: TEMPERATURE HIGH!”.
+     	  b. Serial Monitor prints “ALERT: TEMPERATURE HIGH!”.
      	
-     	  o	Bluetooth sends the same alert to the mobile app.
+     	  c. Bluetooth sends the same alert to the mobile app.
 
    3. This warning repeats until temperature falls below the threshold.
 
@@ -204,13 +204,13 @@ Step 10: Continuous Operation
 
    1.	After initialization and successful door unlock, the system continuously monitors:
 
-        o	Push button states
+        a. Push button states
+
+     	  b. Bluetooth commands
      	
-     	  o	Bluetooth commands
+     	  c. Voice/serial commands
      	
-     	  o	Voice/serial commands
-     	
-     	  o	Temperature & humidity
+     	  d. Temperature & humidity
      	
    2.	LCD updates every 2 seconds, providing real-time feedback.
    3.	The system loops indefinitely, maintaining automation, monitoring and safety
