@@ -75,14 +75,15 @@ Step 1: System Setup and Power Supply
   4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
        
 Step 2: Connecting Input Devices
-             1. Push Buttons:
-                   a. Connect PB1 to Arduino pin D2 and PB2 to D3.
-                   b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
-             2. 4x4 Keypad:
-                   a. Connect rows to analog pins: A0, A1, A2, A3.
-                   b. Connect columns to digital pins: D6, D7, D8, D13.
-             3. DHT11 Sensor:
-                   a. Connect VCC to 5V, GND to GND, and data pin to D12.
+
+  1. Push Buttons:
+      a. Connect PB1 to Arduino pin D2 and PB2 to D3.
+      b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
+  2. 4x4 Keypad:
+      a. Connect rows to analog pins: A0, A1, A2, A3.
+      b. Connect columns to digital pins: D6, D7, D8, D13.
+  3. DHT11 Sensor:
+      a. Connect VCC to 5V, GND to GND, and data pin to D12.
 Step 3: Connecting Output Devices
              1. Relay Module:
                    a. Relay1 controls the DC light, connected to D4 of Arduino.
