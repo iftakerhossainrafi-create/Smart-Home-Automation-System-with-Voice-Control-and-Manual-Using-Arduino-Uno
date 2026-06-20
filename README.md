@@ -160,22 +160,16 @@ Step 7: Remote Control via Bluetooth / Voice
    1.	Send commands from a mobile app connected via HC-05 or via Serial Monitor:
       
         o	Bluetooth Commands:
-
-     	   a. 1 → Light ON
-     	
-      	 b. 2 → Light OFF
-     	
-      	 c. 3 → Fan ON.
-     	
-      	 d. 4 → Fan OFF.
+     	        a. 1 → Light ON
+     	        b. 2 → Light OFF
+     	        c. 3 → Fan ON.
+     	        d. 4 → Fan OFF.
 
       	o	Voice/Serial Commands:
-     	
-     	   a. "relay1 on/off" → Light.
-    
-         b. "relay2 on/off" → Fan.
+     	        a. "relay1 on/off" → Light.
+     	        b. "relay2 on/off" → Fan.
 
-  2.	Arduino reads the command, updates relay states, and refreshes the LCD.
+   2.	Arduino reads the command, updates relay states, and refreshes the LCD.
 
 Step 8: Environmental Monitoring
 
