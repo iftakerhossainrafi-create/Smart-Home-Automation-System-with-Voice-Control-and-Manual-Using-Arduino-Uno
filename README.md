@@ -84,11 +84,13 @@ Step 2: Connecting Input Devices
       b. Connect columns to digital pins: D6, D7, D8, D13.
   3. DHT11 Sensor:
       a. Connect VCC to 5V, GND to GND, and data pin to D12.
+     
 Step 3: Connecting Output Devices
-             1. Relay Module:
-                   a. Relay1 controls the DC light, connected to D4 of Arduino.
-                   b. Relay2 controls the DC fan, connected to D5 of Arduino.
-             2. Servo Motor:
+
+  1. Relay Module:
+      a. Relay1 controls the DC light, connected to D4 of Arduino.
+      b. Relay2 controls the DC fan, connected to D5 of Arduino.
+  2. Servo Motor:
                    a. Connect signal pin of the servo to D9.
                    b. VCC → 5V, GND → GND.
              3. I2C LCD:
