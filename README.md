@@ -88,7 +88,7 @@ Step 2: Connecting Input Devices
      
   5. DHT11 Sensor:
       
-        a. Connect VCC to 5V, GND to GND, and data pin to D12.
+     a. Connect VCC to 5V, GND to GND, and data pin to D12.
  
 Step 3: Connecting Output Devices
 
@@ -114,17 +114,17 @@ Step 4: Arduino Initialization
 
   1. Power on the Arduino.
   2. Upload the Arduino code provided for the system.
-  3.  Arduino initializes:
-      a. LCD displays “SMART HOME – Group 2” for 2 seconds.
-      b. Servo motor moves to locked position (0°).
-      c. System waits for password entry.
+  3. Arduino initializes:
+     a. LCD displays “SMART HOME – Group 2” for 2 seconds.
+     b. Servo motor moves to locked position (0°).
+     c. System waits for password entry.
      
 Step 5: Door Security Operation
              
    1. Enter the password (default: 1234) using the keypad.
    2. Press # to confirm.
    
-       a. If correct:
+      a. If correct:
 
          1. Servo rotates to 90°, unlocking the door.
          2. LCD displays “Door Open – Welcome”.
