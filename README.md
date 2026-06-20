@@ -120,7 +120,9 @@ Step 4: Arduino Initialization
   3. Arduino initializes:
 
      a. LCD displays “SMART HOME – Group 2” for 2 seconds.
+     
      b. Servo motor moves to locked position (0°).
+     
      c. System waits for password entry.
      
 Step 5: Door Security Operation
@@ -145,8 +147,11 @@ Step 6: Manual Control of Loads
   1. Push Button Control:
      
         o	Press PB1 → toggle DC light (Relay1 ON/OFF).
+     
         o	Press PB2 → toggle DC fan (Relay2 ON/OFF).
+     
         o	LCD updates Relay1 and Relay2 status.
+     
         o	Status is sent to Serial Monitor and Bluetooth.
 
 Step 7: Remote Control via Bluetooth / Voice
@@ -154,17 +159,17 @@ Step 7: Remote Control via Bluetooth / Voice
    1.	Send commands from a mobile app connected via HC-05 or via Serial Monitor:
       
         o	Bluetooth Commands:
-     	
-           a. 1 → Light ON.
-     	     b. 2 → Light OFF.
-           c. 3 → Fan ON.
-           d. 4 → Fan OFF.
+     		
+          a. 1 → Light ON
+     	    b. 2 → Light OFF
+     	    c. 3 → Fan ON.
+     	    d. 4 → Fan OFF.
 
       	o	Voice/Serial Commands:
      	     a. "relay1 on/off" → Light.
      	     b. "relay2 on/off" → Fan.
 
-  2.	Arduino reads the command, updates relay states, and refreshes the LCD.
+  3.	Arduino reads the command, updates relay states, and refreshes the LCD.
 
 Step 8: Environmental Monitoring
 
@@ -181,22 +186,27 @@ Step 9: Temperature Warning System
    2.	If temperature > 33°C:
       
         o	LCD displays “WARNING!!! TEMP > 33C”.
+     	
      	  o	Serial Monitor prints “ALERT: TEMPERATURE HIGH!”.
+     	
      	  o	Bluetooth sends the same alert to the mobile app.
 
-   3. This warning repeats until temperature falls below the threshold.
+   4. This warning repeats until temperature falls below the threshold.
 
 Step 10: Continuous Operation
 
    1.	After initialization and successful door unlock, the system continuously monitors:
 
         o	Push button states
+     	
      	  o	Bluetooth commands
+     	
      	  o	Voice/serial commands
+     	
      	  o	Temperature & humidity
      	
-   2.	LCD updates every 2 seconds, providing real-time feedback.
-   3.	The system loops indefinitely, maintaining automation, monitoring, and safety
+   3.	LCD updates every 2 seconds, providing real-time feedback.
+   4.	The system loops indefinitely, maintaining automation, monitoring, and safety
 
 ____________________________________________________________________________________________________________________________
 
