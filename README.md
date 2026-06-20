@@ -45,6 +45,7 @@ ________________________________________________________________________________
 Flowchart
 
 <img width="512" height="951" alt="Flowchart" src="https://github.com/user-attachments/assets/74696ba3-97fa-4c9a-b2bb-8bc7a6c75b62" />
+
 ____________________________________________________________________________________________________________________________
 
 
@@ -67,10 +68,11 @@ ________________________________________________________________________________
 Procedure
 
 Step 1: System Setup and Power Supply
-             1. Place the Arduino UNO on the breadboard or work area.
-             2. Connect the 5V and GND pins of Arduino to the power rails of the breadboard.
-             3. Connect the 12V AC-DC adapter to the relay module, DC fan, and DC light circuits for powering the loads.
-             4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
+
+  1. Place the Arduino UNO on the breadboard or work area.
+  2. Connect the 5V and GND pins of Arduino to the power rails of the breadboard.
+  3. Connect the 12V AC-DC adapter to the relay module, DC fan, and DC light circuits for powering the loads.
+  4. Ensure the 5V AC-DC adapter powers the Arduino, I2C LCD, DHT11 sensor, and keypad.
        
 Step 2: Connecting Input Devices
              1. Push Buttons:
