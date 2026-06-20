@@ -79,14 +79,16 @@ Step 2: Connecting Input Devices
   1. Push Buttons:
 
      a. Connect PB1 to Arduino pin D2 and PB2 to D3.
+
      b. Connect a 2kΩ pull-up resistor to each button or use Arduino’s INPUT_PULLUP mode.
      
-  2. 4x4 Keypad:
+  3. 4x4 Keypad:
 
      a. Connect rows to analog pins: A0, A1, A2, A3.
+     
      b. Connect columns to digital pins: D6, D7, D8, D13.
      
-  3. DHT11 Sensor:
+  5. DHT11 Sensor:
       
      a. Connect VCC to 5V, GND to GND, and data pin to D12.
  
