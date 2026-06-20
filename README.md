@@ -1,0 +1,2 @@
+# Smart-Home-Automation-System-with-Voice-Control-and-Manual-Using-Arduino-Uno
+Designed and implemented a smart home automation system using Arduino UNO integrating password-based security, relay-controlled appliance automation, Bluetooth and voice control features. The system also includes real-time temperature and humidity monitoring with automated safety alerts for enhanced home security and comfort.
